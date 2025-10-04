@@ -1,0 +1,26 @@
+{
+  "name": "ts-template-v22",
+  "version": "1.0.0",
+  "description": "Base template Node.js + TypeScript with lint, prettier, husky, vitest, CI and Docker",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only --require tsconfig-paths/register src/index.ts",
+    "build": "tsc && tsc-alias"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheusfurlan7/node-ts-template-v22.git"
+  },
+  "author": "Matheus Furlan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matheusfurlan7/node-ts-template-v22/issues"
+  },
+  "homepage": "https://github.com/matheusfurlan7/node-ts-template-v22#readme",
+  "devDependencies": {
+    "@types/node": "^24.6.2",
+    "ts-node-dev": "^2.0.0",
+    "tsc-alias": "^1.8.16",
+    "typescript": "^5.9.3"
+  }
+}
