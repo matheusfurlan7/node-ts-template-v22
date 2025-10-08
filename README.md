@@ -35,7 +35,7 @@ To install all dependencies listed in the `package.json` file
 npm run dev
 ```
 
-Start the server in developer mode with `ts-node-dev`. It automatically restarts when a change is detected and rebuilds only what's necessary to speed up development.
+Start the server in developer mode with `nodemon`. It automatically restarts when a change is detected and rebuilds only what's necessary to speed up development.
 
 **Compile for production**
 
