@@ -16,6 +16,8 @@ Base template Node.js + TypeScript with lint, prettier, husky, vitest, CI and Do
 - **ts-node-dev:** [https://github.com/wclr/ts-node-dev](https://github.com/wclr/ts-node-dev)
 - **ESLint:** [https://github.com/eslint/eslint](https://github.com/eslint/eslint)
 - **Prettier:** [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
+- **Husky:** [https://github.com/typicode/husky](https://github.com/typicode/husky)
+- **Lint-staged**: [https://github.com/lint-staged/lint-staged](https://github.com/lint-staged/lint-staged) 
 
 ## Scripts
 
@@ -45,6 +47,13 @@ npm run build
 
 Compiles TypeScript files to JavaScript (`tsc`) and then rewrites the path aliases in the output files (`tsc-alias`) so that Node.js can run correctly
 
+**Husky**
+```bash
+npm run prepare
+```
+
+To prepare Husky to work and check files pre-commit
+
 **Code Quality**
 
 ```bash
@@ -57,7 +66,7 @@ Check if there is any inconsistency in the code, for example, unused variable
 npm run lint:fix
 ```
 
-check for inconsistencies and adjust the file
+Check for inconsistencies and adjust the file
 
 ```bash
 npm run format
