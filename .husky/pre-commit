@@ -1,0 +1,5 @@
+# apply format and check for warnsing about unused variable and parameters
+npx lint-staged
+
+# check if the code is compilable
+npx tsc --noEmit
