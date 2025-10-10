@@ -1,7 +1,8 @@
 ![Node.js v22](https://img.shields.io/badge/Node.js-v22-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
-![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=white)
+![Prettier](https://img.shields.io/badge/Prettier-FF69B4?style=for-the-badge&logo=prettier&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-F7B93E?style=for-the-badge&logo=vitest&logoColor=white)
 
 # node-ts-template-v22
 
@@ -35,11 +36,14 @@ This project was built with the following core technologies:
 - **ESLint:** [https://github.com/eslint/eslint](https://github.com/eslint/eslint)
 - **Prettier:** [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
 - **Husky:** [https://github.com/typicode/husky](https://github.com/typicode/husky)
-- **Lint-staged**: [https://github.com/lint-staged/lint-staged](https://github.com/lint-staged/lint-staged)
+- **Lint-staged:** [https://github.com/lint-staged/lint-staged](https://github.com/lint-staged/lint-staged)
+- **Vitest:** [https://github.com/vitest-dev/vitest](https://github.com/vitest-dev/vitest)
 
 ## Scripts
 
 To run the project, use the following commands:
+
+### Basic
 
 **Install dependencies**
 
@@ -48,6 +52,8 @@ npm install
 ```
 
 To install all dependencies listed in the `package.json` file
+
+### Run code
 
 **Developer mode**
 
@@ -65,6 +71,8 @@ npm run build
 
 Compiles TypeScript files to JavaScript (`tsc`) and then rewrites the path aliases in the output files (`tsc-alias`) so that Node.js can run correctly
 
+### **Code Quality**
+
 **Husky**
 
 ```bash
@@ -73,7 +81,7 @@ npm run prepare
 
 To prepare Husky to work and check files pre-commit
 
-**Code Quality**
+**ESLint**
 
 ```bash
 npm run lint
@@ -87,6 +95,8 @@ npm run lint:fix
 
 Check for inconsistencies and adjust the file
 
+**Prettier**
+
 ```bash
 npm run format
 ```
@@ -98,6 +108,26 @@ npm run format:check
 ```
 
 Check **(not adjust)** spacing and style inconsistencies in the project
+
+**Vitest**
+
+```bash
+npm run test
+```
+
+Run the automated test and wait for new tests, or adjust the code to run the tests that reported an error.
+
+```bash
+npm run test:run
+```
+
+Run the automated test only once.
+
+```bash
+npm run test:coverage
+```
+
+Run the automated test and show the percentage of files covered
 
 ## Contact
 
