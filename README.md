@@ -39,6 +39,14 @@ This project was built with the following core technologies:
 - **Lint-staged:** [https://github.com/lint-staged/lint-staged](https://github.com/lint-staged/lint-staged)
 - **Vitest:** [https://github.com/vitest-dev/vitest](https://github.com/vitest-dev/vitest)
 
+## NVM
+
+``` bash
+nvm use
+```
+
+Adjust the node version to match the project. 
+
 ## Scripts
 
 To run the project, use the following commands:
