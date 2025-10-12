@@ -12,6 +12,8 @@
     "test": "vitest",
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
+    "check:node": "node -e \"const v=process.versions.node.split('.')[0]; if(v < 22) { console.error('Node.js 22+ é necessário'); process.exit(1); }\"",
+    "preinstall": "npm run check:node",
     "dev": "nodemon -L src --ext ts --exec \"ts-node -r tsconfig-paths/register src/index.ts\"",
     "build": "tsc && tsc-alias"
   },
@@ -53,5 +55,9 @@
       "vitest related --run",
       "npx tsc --noEmit"
     ]
-  }
+  },
+  "engines": {
+    "node": ">=22.0.0 <23.0.0"
+  },
+  "engineStrict": true
 }
