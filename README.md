@@ -3,6 +3,7 @@
 ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
 ![Prettier](https://img.shields.io/badge/Prettier-FF69B4?style=for-the-badge&logo=prettier&logoColor=white)
 ![Vitest](https://img.shields.io/badge/Vitest-F7B93E?style=for-the-badge&logo=vitest&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-0db7ed?style=for-the-badge&logo=docker&logoColor=white)
 
 # node-ts-template-v22
 
@@ -15,6 +16,7 @@ Base template Node.js + TypeScript with lint, prettier, husky, vitest, CI and Do
 - [Technologies](#technologies)
 - [Tools](#tools)
 - [Scripts](#scripts)
+- [Docker](#docker)
 - [Contact](#contact)
 
 ## Technologies
@@ -29,15 +31,16 @@ This project was built with the following core technologies:
 
 ## Tools
 
-- **TypeScript:** [https://github.com/microsoft/TypeScript](https://github.com/microsoft/TypeScript)
-- **tsc-alias:** [https://github.com/justkey007/tsc-alias](https://github.com/justkey007/tsc-alias)
-- **Nodemon:** [https://github.com/remy/nodemon](https://github.com/remy/nodemon)
-- **ts-node:** [https://github.com/TypeStrong/ts-node](hhttps://github.com/TypeStrong/ts-node)
-- **ESLint:** [https://github.com/eslint/eslint](https://github.com/eslint/eslint)
-- **Prettier:** [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
-- **Husky:** [https://github.com/typicode/husky](https://github.com/typicode/husky)
-- **Lint-staged:** [https://github.com/lint-staged/lint-staged](https://github.com/lint-staged/lint-staged)
-- **Vitest:** [https://github.com/vitest-dev/vitest](https://github.com/vitest-dev/vitest)
+- [**TypeScript**](https://github.com/microsoft/TypeScript) - Put typing in JavaScript.
+- [**tsc-alias**](https://github.com/justkey007/tsc-alias) - Fix import path to absolute path.
+- [**Nodemon**](https://github.com/remy/nodemon) - Automatically restarts the server after changing the code.
+- [**ts-node**](hhttps://github.com/TypeStrong/ts-node) - Run TypeScript files directly in Node.js without the need for manual compilation.
+- [**ESLint**](https://github.com/eslint/eslint) - Identifies and reports problematic patterns in code, ensuring quality and standardization
+- [**Prettier**](https://github.com/prettier/prettier) - Opinionated code formatter that ensures consistent style across the project.
+- [**Husky**](https://github.com/typicode/husky) - Facilitates the use of Git Hooks to run scripts before a commit or push.
+- [**Lint-staged**](https://github.com/lint-staged/lint-staged) - Runs commands (linters) only on files that have been changed and added to the next commit.
+- [**Vitest**](https://github.com/vitest-dev/vitest) - An ultra-fast testing framework for JavaScript and TypeScript, focused on performance.
+- [**Docker**](https://www.docker.com/) - The open source platform for developing, shipping, and running containerized applications.
 
 ## NVM
 
@@ -136,6 +139,38 @@ npm run test:coverage
 ```
 
 Run the automated test and show the percentage of files covered
+
+## Docker
+
+This project includes two Docker environments: one for **development** (with hot reload) and another for **production** (optimized and lightweight).
+
+Make sure you have Docker installed and running before executing the commands below.
+
+**Development**
+
+Build and run the container in development mode, with automatic reload via `nodemon`.
+
+```bash
+# Build image
+docker build -f Dockerfile.dev -t ts-template-dev .
+
+# Run container with live reload and local volume
+docker run -it -v .:/app -p 3000:3000 ts-template-dev
+```
+
+Build and run the container in development mode, with automatic reload via `nodemon`.
+
+**Production**
+
+```bash
+# Build optimized image
+docker build -f Dockerfile.prod -t ts-template-prod .
+
+# Run container in detached mode
+docker run -d -p 3000:3000 ts-template-prod
+```
+
+Build and run the container in **production mode**, optimized for size and performance.
 
 ## Contact
 
