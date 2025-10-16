@@ -44,11 +44,11 @@ This project was built with the following core technologies:
 
 ## NVM
 
-``` bash
+```bash
 nvm use
 ```
 
-Adjust the node version to match the project. 
+Adjust the node version to match the project.
 
 ## Scripts
 
