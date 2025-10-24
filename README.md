@@ -3,182 +3,211 @@
 ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
 ![Prettier](https://img.shields.io/badge/Prettier-FF69B4?style=for-the-badge&logo=prettier&logoColor=white)
 ![Vitest](https://img.shields.io/badge/Vitest-F7B93E?style=for-the-badge&logo=vitest&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-0db7ed?style=for-the-badge&logo=docker&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-1D63ED?style=for-the-badge&logo=vitest&logoColor=white)
 
-# node-ts-template-v22
+# Node.js + TypeScript Template (v22)
 
-Base template Node.js + TypeScript with lint, prettier, husky, vitest, CI and Docker.
+A clean, optimized template for building Node.js applications using TypeScript. It includes essential tools for linting, formatting, testing, version control, CI integration, and Docker support.
 
-## Index
+## Table of Contents
 
-- [Title and description](#node-ts-template-v22)
-- [Index](#index)
+- [Overview](#overview)
 - [Technologies](#technologies)
 - [Tools](#tools)
+- [Installation](#installation)
 - [Scripts](#scripts)
 - [Docker](#docker)
 - [Contact](#contact)
 
+## OverView
+
+This project is a base template for building modern TypeScript-based Node.js applications. It integrates essential tools for maintaining code quality, including ESLint, Prettier, Vitest for testing, Husky for Git hooks, and Docker for containerization. The template supports a streamlined development environment with support for CI and production-ready Docker configurations.
+
 ## Technologies
 
-This project was built with the following core technologies:
+This project leverages the following core technologies:
 
-<br>
+- **Node.js** v22
+- **TypeScript** for static typing and enhanced developer experience
+- **Docker** for containerization
+- **Vitest** for fast and efficient testing
 
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=nodejs,typescript,vitest,docker" />
-</p>
+<p align="left"> <img src="https://skillicons.dev/icons?i=nodejs,typescript,vitest,docker" /> </p>
 
 ## Tools
 
-- [**TypeScript**](https://github.com/microsoft/TypeScript) - Put typing in JavaScript.
-- [**tsc-alias**](https://github.com/justkey007/tsc-alias) - Fix import path to absolute path.
-- [**Nodemon**](https://github.com/remy/nodemon) - Automatically restarts the server after changing the code.
-- [**ts-node**](hhttps://github.com/TypeStrong/ts-node) - Run TypeScript files directly in Node.js without the need for manual compilation.
-- [**ESLint**](https://github.com/eslint/eslint) - Identifies and reports problematic patterns in code, ensuring quality and standardization
-- [**Prettier**](https://github.com/prettier/prettier) - Opinionated code formatter that ensures consistent style across the project.
-- [**Husky**](https://github.com/typicode/husky) - Facilitates the use of Git Hooks to run scripts before a commit or push.
-- [**Lint-staged**](https://github.com/lint-staged/lint-staged) - Runs commands (linters) only on files that have been changed and added to the next commit.
-- [**Vitest**](https://github.com/vitest-dev/vitest) - An ultra-fast testing framework for JavaScript and TypeScript, focused on performance.
-- [**Docker**](https://www.docker.com/) - The open source platform for developing, shipping, and running containerized applications.
+- [**TypeScript**](https://github.com/microsoft/TypeScript) - Adds static types to JavaScript.
+- [**tsc-alias**](https://github.com/justkey007/tsc-alias) - Resolves TypeScript import aliases to absolute paths.
+- [**Nodemon**](https://github.com/remy/nodemon) - Automatically restarts the server on file changes during development.
+- [**ts-node**](https://github.com/TypeStrong/ts-node) - Runs TypeScript code directly without precompilation.
+- [**ESLint**](https://github.com/eslint/eslint) - Lints JavaScript/TypeScript code to enforce consistent style and catch errors.
+- [**Prettier**](https://github.com/prettier/prettier) - Code formatter for maintaining consistent styling.
+- [**Husky**](https://github.com/typicode/husky) - Git hooks to enforce pre-commit checks.
+- [**Lint-staged**](https://github.com/lint-staged/lint-staged) - Runs linters on staged files before commit.
+- [**Vitest**](https://github.com/vitest-dev/vitest) - A fast testing framework for JavaScript and TypeScript.
 
-## NVM
+## Installation
 
-```bash
-nvm use
-```
+### Prerequisites
 
-Adjust the node version to match the project.
+Before you begin, ensure you have the following installed:
 
-## Scripts
+- **Node.js** v22+ (or use NVM for version management)
+- **Docker** (for containerization)
+- **Git** (for version control)
 
-To run the project, use the following commands:
+### Setup
 
-### Basic
-
-**Install dependencies**
+To get started, clone this repository and install dependencies:
 
 ```bash
+git clone <repository_url>
+cd <project_directory>
 npm install
 ```
 
-To install all dependencies listed in the `package.json` file
+## Scripts
 
-### Run code
+This template includes the following predefined scripts for development and production workflows.
 
-**Developer mode**
+### Development
+
+**Start development server with hot reload:**
 
 ```bash
 npm run dev
 ```
 
-Start the server in developer mode with `nodemon`. It automatically restarts when a change is detected and rebuilds only what's necessary to speed up development.
+This command runs the application in developer mode with nodemon for automatic restarts on file changes.
 
-**Compile for production**
+### Build
+
+**Compile TypeScript for production:**
 
 ```bash
 npm run build
 ```
 
-Compiles TypeScript files to JavaScript (`tsc`) and then rewrites the path aliases in the output files (`tsc-alias`) so that Node.js can run correctly
+This compiles TypeScript to JavaScript and rewrites path aliases for proper Node.js execution.
 
-### **Code Quality**
+### Code Quality
 
-**Husky**
+**Run Husky to prepare Git hooks:**
 
 ```bash
 npm run prepare
 ```
 
-To prepare Husky to work and check files pre-commit
-
-**ESLint**
+**Lint the code:**
 
 ```bash
 npm run lint
 ```
 
-Check if there is any inconsistency in the code, for example, unused variable
+Check for issues such as unused variables and improper code patterns.
+
+**Fix linting issues automatically:**
 
 ```bash
 npm run lint:fix
 ```
 
-Check for inconsistencies and adjust the file
-
-**Prettier**
+**Format code with Prettier:**
 
 ```bash
 npm run format
 ```
 
-Check and adjust spacing and style inconsistencies in the project
+Fix spacing and style issues automatically.
+
+**Check formatting without changing:**
 
 ```bash
 npm run format:check
 ```
 
-Check **(not adjust)** spacing and style inconsistencies in the project
-
-**Vitest**
+**Run Tests with Vitest:**
 
 ```bash
 npm run test
 ```
 
-Run the automated test and wait for new tests, or adjust the code to run the tests that reported an error.
+This runs all the tests and watches for new ones.
+
+**Run tests once:**
 
 ```bash
 npm run test:run
 ```
 
-Run the automated test only once.
+**Check test coverage:**
 
 ```bash
 npm run test:coverage
 ```
 
-Run the automated test and show the percentage of files covered
-
 ## Docker
 
-This project includes two Docker environments: one for **development** (with hot reload) and another for **production** (optimized and lightweight).
+This project includes Docker configurations for both development and production environments.
 
-Make sure you have Docker installed and running before executing the commands below.
+Make sure Docker is installed before proceeding.`
 
-**Development**
+### Development Mode
 
-Build and run the container in development mode, with automatic reload via `nodemon`.
+To run the project in a development Docker container with live reload:
 
 ```bash
-# Build image
+# Build the Docker image for development
 docker build -f Dockerfile.dev -t ts-template-dev .
 
-# Run container with live reload and local volume
+# Run the container with live reload and volume mount
 docker run -it -v .:/app -p 3000:3000 ts-template-dev
 ```
 
-Build and run the container in development mode, with automatic reload via `nodemon`.
+### Production Mode
 
-**Production**
+To run the project in production mode:
 
 ```bash
-# Build optimized image
+# Build the production-ready Docker image
 docker build -f Dockerfile.prod -t ts-template-prod .
 
-# Run container in detached mode
-docker run -d -p 3000:3000 ts-template-prod
+# Run the container in detached mode
+docker run -d -p 3000:3000
 ```
 
-Build and run the container in **production mode**, optimized for size and performance.
+### Dockerfile Breakdown
+
+| Mode        | File              | Purpose                                   | Hot Reload | Dependencies     |
+| ----------- | ----------------- | ----------------------------------------- | ---------- | ---------------- |
+| Development | `Dockerfile.dev`  | Development setup with hot reload         | ✅ Yes     | All dependencies |
+| Production  | `Dockerfile.prod` | Optimized build for production deployment | ❌ No      | Production only  |
+
+### Useful Docker Commands
+
+```bash
+# List running containers
+docker ps
+
+# Stop a running container
+docker stop <container_id>
+
+# Remove a stopped container
+docker rm <container_id>
+
+# View logs of a container
+docker logs -f <container_id>
+
+# Access a container's shell
+docker exec -it <container_id> sh
+
+# Clean up unused images and containers
+docker system prune -a
+```
 
 ## Contact
 
 Connect with me:
 
-<a href="https://github.com/matheusfurlan7" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
-</a>
-<a href="https://www.linkedin.com/in/matheusfurlan7" target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-</a>
+- [GitHub](https://github.com/matheusfurlan7)
+- [Linkedin](ttps://www.linkedin.com/in/matheusfurlan7)
