@@ -1,2 +1,5 @@
+# check if the project compilation
+npx tsc --noEmit
+
 # apply format and check for warnsing about unused variable and parameters
 npx lint-staged 
