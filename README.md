@@ -210,4 +210,4 @@ docker system prune -a
 Connect with me:
 
 - [GitHub](https://github.com/matheusfurlan7)
-- [Linkedin](ttps://www.linkedin.com/in/matheusfurlan7)
+- [Linkedin](https://www.linkedin.com/in/matheusfurlan7)
